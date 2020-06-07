@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833E3440248D214100257278 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E343F248D214100257278 /* DatabaseManager.swift */; };
 		83853604248BDE4700B7AE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83853603248BDE4700B7AE9D /* AppDelegate.swift */; };
 		83853606248BDE4700B7AE9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83853605248BDE4700B7AE9D /* SceneDelegate.swift */; };
 		83853608248BDE4700B7AE9D /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83853607248BDE4700B7AE9D /* ConversationsViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		46C79EEC5A20B2058FCA8463 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
+		833E343F248D214100257278 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		83853600248BDE4700B7AE9D /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83853603248BDE4700B7AE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83853605248BDE4700B7AE9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				83853603248BDE4700B7AE9D /* AppDelegate.swift */,
 				83853605248BDE4700B7AE9D /* SceneDelegate.swift */,
 				8385362A248BF26400B7AE9D /* Extensions.swift */,
+				833E343F248D214100257278 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8385361E248BDFEF00B7AE9D /* LoginViewController.swift in Sources */,
+				833E3440248D214100257278 /* DatabaseManager.swift in Sources */,
 				83853620248BDFFE00B7AE9D /* RegisterViewController.swift in Sources */,
 				83853626248BE04500B7AE9D /* NewConversationViewController.swift in Sources */,
 				83853608248BDE4700B7AE9D /* ConversationsViewController.swift in Sources */,
