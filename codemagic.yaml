@@ -1,0 +1,12 @@
+# Customize the codemagic.yaml file according to your project and commit it to the root of your repository
+# Check out https://docs.codemagic.io/getting-started/yaml/ for more information
+workflows:
+  example-workflow:
+    name: Example Workflow
+    scripts:
+      - name: Step name
+        script: echo "Hello Codemagician!"
+    publishing:
+      email:
+        recipients:
+          - codemagic@example.com
