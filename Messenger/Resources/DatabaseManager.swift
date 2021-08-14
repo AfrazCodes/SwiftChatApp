@@ -228,7 +228,7 @@ extension DatabaseManager {
                 break
             case .contact(_):
                 break
-            case .custom(_):
+            case .custom(_), .linkPreview(_):
                 break
             }
 
@@ -326,21 +326,7 @@ extension DatabaseManager {
         switch firstMessage.kind {
         case .text(let messageText):
             message = messageText
-        case .attributedText(_):
-            break
-        case .photo(_):
-            break
-        case .video(_):
-            break
-        case .location(_):
-            break
-        case .emoji(_):
-            break
-        case .audio(_):
-            break
-        case .contact(_):
-            break
-        case .custom(_):
+        case .attributedText(_), .photo(_), .video(_), .location(_), .emoji(_), .audio(_), .contact(_),.custom(_), .linkPreview(_):
             break
         }
 
@@ -540,7 +526,7 @@ extension DatabaseManager {
                 break
             case .contact(_):
                 break
-            case .custom(_):
+            case .custom(_), .linkPreview(_):
                 break
             }
 

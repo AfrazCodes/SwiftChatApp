@@ -92,8 +92,6 @@ final class LoginViewController: UIViewController {
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
 
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-
         title = "Log In"
         view.backgroundColor = .systemBackground
 
@@ -102,9 +100,11 @@ final class LoginViewController: UIViewController {
                                                             target: self,
                                                             action: #selector(didTapRegister))
 
-        loginButton.addTarget(self,
-                              action: #selector(loginButtonTapped),
-                              for: .touchUpInside)
+        loginButton.addTarget(
+            self,
+            action: #selector(loginButtonTapped),
+            for: .touchUpInside
+        )
 
         emailField.delegate = self
         passwordField.delegate = self
@@ -119,6 +119,7 @@ final class LoginViewController: UIViewController {
         scrollView.addSubview(loginButton)
         scrollView.addSubview(facebookLoginButton)
         scrollView.addSubview(googleLogInButton)
+        googleLogInButton.addTarget(self, action: #selector(googleSignInButtonTapped), for: .touchUpInside)
     }
 
     deinit {
@@ -159,6 +160,17 @@ final class LoginViewController: UIViewController {
                                    y: facebookLoginButton.bottom+10,
                                    width: scrollView.width-60,
                                    height: 52)
+    }
+
+    @objc private func googleSignInButtonTapped() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+              let signInConfig = appDelegate.signInConfig else {
+            return
+        }
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+            guard let user = user, error == nil else { return }
+            appDelegate.handleSessionRestore(user: user)
+        }
     }
 
     @objc private func loginButtonTapped() {

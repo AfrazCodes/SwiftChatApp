@@ -53,7 +53,7 @@ final class ProfileViewController: UIViewController {
                                             FBSDKLoginKit.LoginManager().logOut()
 
                                             // Google Log out
-                                            GIDSignIn.sharedInstance()?.signOut()
+                                            GIDSignIn.sharedInstance.signOut()
 
                                             do {
                                                 try FirebaseAuth.Auth.auth().signOut()
