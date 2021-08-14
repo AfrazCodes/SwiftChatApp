@@ -16,3 +16,7 @@ A beginners swift project to create a real time chat application in Swift 5 usin
 - Dark Mode Support
 
 Take a look at the free playlist on YouTube for a step by step guide how to build this project!
+
+## Set Up
+
+After cloning the repo, you'll need to run `pod install` to install cocoapod dependencies.
